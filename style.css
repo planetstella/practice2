@@ -1,0 +1,101 @@
+@import url(reset.css);
+
+body{
+    width: 100%;
+}
+
+ul{
+    background-color: #333cea;
+    width: 100px;
+    
+    position: fixed;
+    right: 0;
+    top: 40%;
+}
+
+header {
+    width: 90%;
+    height: 80px;
+
+    display: flex;
+    margin: 0 auto;
+}
+
+h1 {
+    font-size: 36px;
+    line-height: 80px;
+}
+
+.menu{
+
+    display: block;
+    width: 90%;
+    text-align: right;
+    font-size: 28px;
+    line-height: 80px;
+}
+
+.burger_menu_btn{
+    margin-right: 18px;
+}
+
+.burger{
+    font-size: 36px;
+    line-height: 80px;
+    display: none;
+}
+
+.floating li{
+    width: 100%;
+    text-align: center;
+    padding: 8px 0 8px;
+}
+   
+
+.floating li > a{
+    color: #fff;
+    text-decoration: none;
+}
+
+
+@media screen and (max-width:640px) {
+
+    header {
+        justify-content: space-between;
+    }
+
+    .floating {
+        display: none;
+    }
+
+    .burger{
+        display: block;
+
+        z-index: 1000;
+    }
+
+    .menu {
+        height: 100vh;
+        background-color: beige;
+        width: 200px;
+        display: flex;
+        flex-direction: column;
+
+        position: fixed;
+        right: 0;
+        padding-top: 80px;
+
+        transform: translateX(100%);
+        transition: transform 0.3s ease;
+    }
+
+    .burger_menu_btn {
+        text-align: left;
+        margin-left: 18px;
+    }
+    
+    .menu.active {
+        transform: translateX(0);
+    }
+   
+}
